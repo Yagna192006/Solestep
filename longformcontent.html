@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>SOLESTEP Shoes | Premium Footwear Brand in India</title>
+
+<style>
+:root{
+ --bg:#f5f7fb;
+ --text:#111;
+ --card:#ffffff;
+ --primary:#6366f1;
+ --accent:#9333ea;
+}
+.dark{
+ --bg:#0f172a;
+ --text:#f1f5f9;
+ --card:#1e293b;
+}
+*{
+ margin:0;
+ padding:0;
+ box-sizing:border-box;
+ font-family:Segoe UI,sans-serif;
+}
+html{scroll-behavior:smooth}
+body{
+ background:var(--bg);
+ color:var(--text);
+ line-height:1.85;
+ transition:.3s;
+}
+
+/* NAV */
+nav{
+ position:sticky;top:0;z-index:1000;
+ background:var(--card);
+ display:flex;justify-content:space-between;
+ align-items:center;padding:15px 30px;
+ box-shadow:0 15px 30px rgba(0,0,0,.1)
+}
+nav a{
+ margin:0 10px;
+ text-decoration:none;
+ color:inherit;
+ font-weight:500;
+ transition:.3s;
+}
+nav a:hover{color:var(--primary)}
+nav button{
+ background:var(--primary);color:#fff;
+ border:none;padding:8px 18px;
+ border-radius:20px;cursor:pointer
+}
+
+/* HERO */
+header{
+ background:linear-gradient(135deg,var(--primary),var(--accent));
+ color:#fff;
+ padding:120px 20px;
+ text-align:center;
+}
+header h1{
+ font-size:3.2rem;
+}
+header p{
+ margin-top:20px;
+ font-size:1.2rem;
+ max-width:900px;
+ margin-left:auto;
+ margin-right:auto;
+}
+
+/* SECTION */
+section{
+ padding:90px 20px;
+}
+.container{
+ max-width:1100px;
+ margin:auto;
+}
+
+/* CARD */
+.card{
+ background:var(--card);
+ padding:50px;
+ border-radius:25px;
+ box-shadow:0 25px 45px rgba(0,0,0,.12);
+ margin-bottom:50px;
+ transition:.3s;
+}
+.card:hover{
+ transform:translateY(-5px);
+ box-shadow:0 30px 60px rgba(0,0,0,.18);
+}
+.card h2{
+ color:var(--primary);
+ margin-bottom:18px;
+ font-size:1.9rem;
+}
+.card p{
+ margin-bottom:18px;
+ font-size:1.05rem;
+}
+
+/* CTA */
+.cta{
+ background:linear-gradient(135deg,#020617,#1e293b);
+ color:#fff;
+ text-align:center;
+ padding:80px 25px;
+ border-radius:35px;
+}
+.cta a{
+ display:inline-block;
+ margin-top:30px;
+ background:var(--primary);
+ color:#fff;
+ padding:15px 45px;
+ border-radius:35px;
+ text-decoration:none;
+ font-weight:600;
+}
+
+/* FOOTER */
+footer{
+ background:#020617;
+ color:#aaa;
+ text-align:center;
+ padding:45px 20px;
+ margin-top:60px;
+}
+</style>
+</head>
+
+<body>
+
+<nav>
+<strong>SOLESTEP</strong>
+<div>
+ <a href="index.html">Home</a>
+ <a href="products.html">Shop</a>
+ <a href="solemedia.html">SoleMedia</a>
+ <a href="longformcontent.html">LLContent</a>
+ <a href="products-journal.html">Journal</a>
+ <a href="email-marketing.html">Email</a>
+ <a href="video-marketing.html">Video</a>
+ <a href="aboutus.html">About</a>
+ <a href="login.html">Login</a>
+ <button onclick="toggleDark()">Dark</button>
+</div>
+</nav>
+
+<header>
+<h1>SOLESTEP Shoes</h1>
+<p>
+A premium Indian footwear brand offering stylish, comfortable, and affordable shoes 
+designed for modern lifestyles.
+</p>
+</header>
+
+<section>
+<div class="container">
+
+<div class="card">
+<h2>SOLESTEP – A Modern Footwear Brand in India</h2>
+<p>
+SOLESTEP is a growing Indian footwear brand focused on creating high-quality shoes 
+that balance comfort, durability, and style.
+</p>
+<p>
+Our mission is to deliver premium footwear at affordable prices for people who 
+expect more from their everyday shoes.
+</p>
+</div>
+
+<div class="card">
+<h2>Designed for Comfort, Built for Daily Wear</h2>
+<p>
+Comfort is the foundation of every SOLESTEP shoe. Our footwear features cushioned soles, 
+lightweight construction, and breathable materials to reduce fatigue.
+</p>
+<p>
+Whether you're commuting, working, or exploring the city, SOLESTEP adapts to your movement.
+</p>
+</div>
+
+<div class="card">
+<h2>Premium Sneakers for Men and Women</h2>
+<p>
+Our sneakers combine modern design with everyday comfort. They are perfect for 
+college students, professionals, and active individuals.
+</p>
+<p>
+Lightweight materials and flexible soles ensure all-day performance.
+</p>
+</div>
+
+<div class="card">
+<h2>Stylish Shoes That Match Modern Fashion</h2>
+<p>
+SOLESTEP shoes feature clean silhouettes, versatile colors, and minimal branding. 
+They transition seamlessly between casual and semi-formal settings.
+</p>
+</div>
+
+<div class="card">
+<h2>Lightweight, Durable & Breathable</h2>
+<p>
+Breathable fabrics improve airflow while durable outsoles ensure long-term performance.
+This balance makes SOLESTEP ideal for daily wear.
+</p>
+</div>
+
+<div class="card">
+<h2>Why Choose SOLESTEP?</h2>
+<p>
+We combine comfort, reliability, and modern aesthetics to create footwear 
+that supports confidence and performance.
+</p>
+<p>
+SOLESTEP is more than a shoe — it’s your everyday companion.
+</p>
+</div>
+
+<div class="cta">
+<h2>Step Into Comfort with SOLESTEP</h2>
+<p>Discover stylish, comfortable, and durable footwear built for life.</p>
+<a href="products.html">Explore Collection</a>
+</div>
+
+</div>
+</section>
+
+<footer>
+<h3 style="color:#fff">SOLESTEP</h3>
+<p>Premium Footwear Brand in India</p>
+<p style="margin-top:15px;font-size:.9rem">&copy; 2026 SOLESTEP. All Rights Reserved.</p>
+</footer>
+
+<script>
+function toggleDark(){
+ document.body.classList.toggle("dark");
+ localStorage.setItem("theme",
+ document.body.classList.contains("dark")?"dark":"light");
+}
+if(localStorage.getItem("theme")==="dark"){
+ document.body.classList.add("dark");
+}
+</script>
+
+</body>
+</html>

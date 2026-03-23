@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>SOLEMEDIA | SOLESTEP Community</title>
+
+<style>
+:root{
+ --bg:#f5f7fb;
+ --text:#111;
+ --card:#ffffff;
+ --primary:#6366f1;
+ --accent:#9333ea;
+}
+.dark{
+ --bg:#0f172a;
+ --text:#f1f5f9;
+ --card:#1e293b;
+}
+*{
+ margin:0;
+ padding:0;
+ box-sizing:border-box;
+ font-family:Segoe UI,sans-serif;
+}
+html{scroll-behavior:smooth}
+body{
+ background:var(--bg);
+ color:var(--text);
+ transition:.3s;
+}
+
+/* NAVBAR */
+nav{
+ position:sticky;top:0;z-index:1000;
+ background:var(--card);
+ display:flex;justify-content:space-between;
+ align-items:center;padding:15px 30px;
+ box-shadow:0 15px 30px rgba(0,0,0,.1)
+}
+nav a{
+ margin:0 10px;
+ text-decoration:none;
+ color:inherit;
+ font-weight:500;
+ transition:.3s;
+}
+nav a:hover{color:var(--primary)}
+nav button{
+ background:var(--primary);
+ color:#fff;
+ border:none;
+ padding:8px 18px;
+ border-radius:20px;
+ cursor:pointer
+}
+
+/* PAGE HEADER */
+.header{
+ text-align:center;
+ padding:70px 20px;
+ background:linear-gradient(135deg,var(--primary),var(--accent));
+ color:#fff;
+}
+.header h2{font-size:2.8rem;}
+.header p{margin-top:10px;font-size:1.2rem}
+
+/* FEED */
+.feed{
+ max-width:900px;
+ margin:50px auto;
+ padding:0 15px;
+ display:grid;
+ gap:40px;
+}
+
+/* POST CARD */
+.post{
+ background:var(--card);
+ border-radius:20px;
+ box-shadow:0 20px 40px rgba(0,0,0,.12);
+ overflow:hidden;
+ transition:.3s;
+}
+.post:hover{
+ transform:translateY(-5px);
+ box-shadow:0 25px 50px rgba(0,0,0,.18);
+}
+
+/* POST HEADER */
+.post-header{
+ display:flex;
+ align-items:center;
+ gap:15px;
+ padding:15px 20px;
+}
+.avatar{
+ width:45px;
+ height:45px;
+ border-radius:50%;
+ background:linear-gradient(135deg,var(--primary),var(--accent));
+ display:flex;
+ align-items:center;
+ justify-content:center;
+ color:#fff;
+ font-weight:bold;
+}
+.username{font-weight:600}
+
+/* MEDIA */
+.post img,
+.post video{
+ width:100%;
+ display:block;
+ max-height:500px;
+ object-fit:cover;
+}
+
+/* POST CONTENT */
+.post-content{
+ padding:20px;
+}
+.post-content h3{
+ margin-bottom:8px;
+}
+.post-content p{
+ color:#555;
+ font-size:.95rem;
+}
+.dark .post-content p{
+ color:#cbd5e1;
+}
+
+/* ACTIONS */
+.actions{
+ display:flex;
+ justify-content:space-between;
+ padding:12px 20px;
+ border-top:1px solid #eee;
+}
+.dark .actions{border-color:#334155}
+.actions span{
+ cursor:pointer;
+ font-size:1.05rem;
+ transition:.3s;
+}
+.actions span:hover{
+ color:var(--primary);
+}
+
+/* FOOTER */
+footer{
+ margin-top:60px;
+ background:#020617;
+ color:#aaa;
+ text-align:center;
+ padding:40px 20px;
+}
+</style>
+</head>
+
+<body>
+
+<nav>
+<strong>SOLESTEP</strong>
+<div>
+ <a href="index.html">Home</a>
+ <a href="products.html">Shop</a>
+ <a href="solemedia.html">SoleMedia</a>
+ <a href="longformcontent.html">LLContent</a>
+ <a href="products-journal.html">Journal</a>
+ <a href="email-marketing.html">Email</a>
+ <a href="video-marketing.html">Video</a>
+ <a href="aboutus.html">About</a>
+ <a href="login.html">Login</a>
+ <button onclick="toggleDark()">Dark</button>
+</div>
+</nav>
+
+<div class="header">
+ <h2>SOLEMEDIA</h2>
+ <p>Official Social Space of SOLESTEP</p>
+</div>
+
+<section class="feed">
+
+<!-- POST 1 -->
+<div class="post">
+ <div class="post-header">
+  <div class="avatar">S</div>
+  <div class="username">solestep_official</div>
+ </div>
+
+ <img src="https://images.unsplash.com/photo-1542291026-7eec264c27ff" alt="SoleStep Shoes">
+
+ <div class="post-content">
+  <h3>Step Into Style 👟</h3>
+  <p>
+   Designed for comfort. Built for everyday movement.
+   Discover the new SOLESTEP collection.
+  </p>
+ </div>
+
+ <div class="actions">
+  <span>❤️ Like</span>
+  <span>💬 Comment</span>
+  <span>📤 Share</span>
+ </div>
+</div>
+
+<!-- POST 2 -->
+<div class="post">
+ <div class="post-header">
+  <div class="avatar">S</div>
+  <div class="username">solestep_official</div>
+ </div>
+
+ <video controls muted loop>
+  <source src="video1.mp4" type="video/mp4">
+ </video>
+
+ <div class="post-content">
+  <h3>Comfort in Motion 🎥</h3>
+  <p>
+   Watch how SOLESTEP shoes move with you —
+   lightweight, flexible, and performance-ready.
+  </p>
+ </div>
+
+ <div class="actions">
+  <span>❤️ Like</span>
+  <span>💬 Comment</span>
+  <span>📤 Share</span>
+ </div>
+</div>
+
+<!-- POST 3 -->
+<div class="post">
+ <div class="post-header">
+  <div class="avatar">S</div>
+  <div class="username">solestep_official</div>
+ </div>
+
+ <img src="https://images.unsplash.com/photo-1525966222134-fcfa99b8ae77" alt="SoleStep Sneakers">
+
+ <div class="post-content">
+  <h3>Built for Everyday Life</h3>
+  <p>
+   One shoe. Multiple lifestyles.
+   From streets to workouts — SOLESTEP fits everywhere.
+  </p>
+ </div>
+
+ <div class="actions">
+  <span>❤️ Like</span>
+  <span>💬 Comment</span>
+  <span>📤 Share</span>
+ </div>
+</div>
+
+</section>
+
+<footer>
+ <h3 style="color:#fff">SOLESTEP</h3>
+ <p>Designed for Comfort. Built for Life.</p>
+ <p style="margin-top:15px;font-size:.9rem">&copy; 2026 SOLESTEP</p>
+</footer>
+
+<script>
+function toggleDark(){
+ document.body.classList.toggle("dark");
+ localStorage.setItem("theme",
+ document.body.classList.contains("dark")?"dark":"light");
+}
+if(localStorage.getItem("theme")==="dark"){
+ document.body.classList.add("dark");
+}
+</script>
+
+</body>
+</html>

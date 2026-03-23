@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>SOLESTEP | Email Marketing</title>
+
+<style>
+:root{
+ --bg:#f5f7fb;
+ --text:#111;
+ --card:#ffffff;
+ --primary:#6366f1;
+ --accent:#9333ea;
+}
+.dark{
+ --bg:#0f172a;
+ --text:#f1f5f9;
+ --card:#1e293b;
+}
+*{
+ margin:0;
+ padding:0;
+ box-sizing:border-box;
+ font-family:Segoe UI,sans-serif;
+}
+html{scroll-behavior:smooth}
+body{
+ background:var(--bg);
+ color:var(--text);
+ transition:.3s;
+}
+
+nav{
+ position:sticky;top:0;z-index:1000;
+ background:var(--card);
+ display:flex;justify-content:space-between;
+ align-items:center;padding:15px 30px;
+ box-shadow:0 10px 25px rgba(0,0,0,.1)
+}
+nav a{margin:0 10px;text-decoration:none;color:inherit}
+nav a:hover{color:var(--primary)}
+nav button{
+ background:var(--primary);color:#fff;
+ border:none;padding:6px 16px;border-radius:20px;cursor:pointer
+}
+
+/* FORM */
+.container{
+ max-width:600px;
+ margin:60px auto;
+ background:var(--card);
+ padding:40px;
+ border-radius:20px;
+ box-shadow:0 20px 50px rgba(0,0,0,.15);
+}
+h1,h2{
+ text-align:center;
+ color:var(--primary);
+}
+input, textarea{
+ width:100%;
+ padding:12px;
+ margin-top:15px;
+ border-radius:10px;
+ border:1px solid #ccc;
+ background:transparent;
+ color:var(--text);
+}
+textarea{height:150px}
+button{
+ background:var(--primary);color:#fff;
+ border:none;padding:6px 16px;border-radius:20px;cursor:pointer
+}
+
+/* INFO SECTION */
+.info{
+ max-width:900px;
+ margin:60px auto;
+ background:var(--card);
+ padding:45px;
+ border-radius:22px;
+ box-shadow:0 15px 40px rgba(0,0,0,.12);
+}
+.info p{line-height:1.7;margin-bottom:15px}
+
+/* EMAIL TEMPLATE */
+.email-box{
+ max-width:700px;
+ margin:50px auto;
+ background:var(--card);
+ border-radius:20px;
+ box-shadow:0 15px 40px rgba(0,0,0,.12);
+ overflow:hidden;
+}
+.email-header{
+ background:var(--primary);
+ color:#fff;
+ padding:25px;
+ text-align:center;
+}
+.email-body{
+ padding:30px;
+ line-height:1.7;
+}
+.email-footer{
+ background:#f1f5f9;
+ padding:20px;
+ text-align:center;
+ font-size:.9rem;
+}
+.dark .email-footer{
+ background:#1e293b;
+}
+.badge{
+ display:inline-block;
+ background:#eef2ff;
+ color:var(--primary);
+ padding:6px 14px;
+ border-radius:20px;
+ font-size:.85rem;
+ margin-bottom:15px;
+}
+
+/* FOOTER */
+footer{
+ background:#020617;
+ color:#aaa;
+ text-align:center;
+ padding:40px 20px;
+ margin-top:60px;
+}
+</style>
+</head>
+
+<body>
+
+<nav>
+<strong>SOLESTEP</strong>
+<div>
+ <a href="index.html">Home</a>
+ <a href="products.html">Shop</a>
+ <a href="solemedia.html">SoleMedia</a>
+ <a href="longformcontent.html">LLContent</a>
+ <a href="products-journal.html">Journal</a>
+ <a href="email-marketing.html">Email</a>
+ <a href="video-marketing.html">Video</a>
+ <a href="aboutus.html">About</a>
+ <a href="login.html">Login</a>
+ <button onclick="toggleDark()">Dark</button>
+</div>
+</nav>
+
+<!-- FORM -->
+<div class="container">
+<h1>Email Marketing System</h1>
+<form>
+<input type="text" placeholder="Email Subject">
+<input type="text" placeholder="Customer Emails (comma separated)">
+<textarea placeholder="Custom Message (optional)"></textarea>
+<button type="submit">Send Email</button>
+</form>
+</div>
+
+<!-- INFO -->
+<div class="info">
+<h2>What is Email Marketing?</h2>
+<p>Email marketing is a digital strategy used to communicate with customers directly through emails. It helps promote products, share updates, and build long-term relationships.</p>
+
+<h2>Types of Email Marketing</h2>
+<p><strong>Transactional Emails:</strong> Sent automatically after actions like purchases or password resets.</p>
+<p><strong>Newsletter Emails:</strong> Regular updates about new products and company news.</p>
+<p><strong>Promotional Emails:</strong> Special offers and discounts to boost sales.</p>
+</div>
+
+<!-- TRANSACTIONAL -->
+<div class="email-box">
+<div class="email-header">
+<h2>Order Confirmation</h2>
+</div>
+<img src="transactional.png" style="width:100%">
+<div class="email-body">
+<span class="badge">Transactional Email</span>
+<p>Hello Customer,</p>
+<p>Your order has been successfully placed.</p>
+<p><strong>Order ID:</strong> SS10245<br>
+<strong>Status:</strong> Confirmed<br>
+<strong>Delivery:</strong> 3–5 Business Days</p>
+<p>Thank you for shopping with SOLESTEP.</p>
+</div>
+<div class="email-footer">
+Automated transactional email.
+</div>
+</div>
+
+<!-- NEWSLETTER -->
+<div class="email-box">
+<div class="email-header">
+<h2>Monthly Newsletter</h2>
+</div>
+<img src="newsletter.png" style="width:100%">
+<div class="email-body">
+<span class="badge">Newsletter Email</span>
+<p>Hello Sneaker Lover 👟,</p>
+<p>Explore our latest collections and fashion updates.</p>
+<ul>
+<li>New premium arrivals</li>
+<li>Upcoming launches</li>
+<li>Style tips</li>
+</ul>
+</div>
+<div class="email-footer">
+You are receiving this email because you subscribed.
+</div>
+</div>
+
+<!-- PROMOTIONAL -->
+<div class="email-box">
+<div class="email-header">
+<h2>🔥 30% OFF Limited Offer</h2>
+</div>
+<img src="promotional-1.png" style="width:100%">
+<div class="email-body">
+<span class="badge">Promotional Email</span>
+<p>Enjoy 30% OFF on selected footwear.</p>
+<p><strong>Coupon Code:</strong> STEP30</p>
+<p>Hurry! Limited time only.</p>
+</div>
+<div class="email-footer">
+© 2026 SOLESTEP Promotions
+</div>
+</div>
+
+<footer>
+© 2026 SOLESTEP | Email Marketing Project
+</footer>
+
+<script>
+function toggleDark(){
+ document.body.classList.toggle("dark");
+ localStorage.setItem("theme",
+ document.body.classList.contains("dark")?"dark":"light");
+}
+if(localStorage.getItem("theme")==="dark"){
+ document.body.classList.add("dark");
+}
+</script>
+
+</body>
+</html>

@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>SOLESTEP | Designed for Comfort. Built for Life.</title>
+
+<style>
+:root{
+ --bg:#f5f7fb;
+ --text:#111;
+ --card:#fff;
+ --primary:#6366f1;
+ --accent:#9333ea;
+}
+.dark{
+ --bg:#0f172a;
+ --text:#f1f5f9;
+ --card:#1e293b;
+}
+*{
+ margin:0;
+ padding:0;
+ box-sizing:border-box;
+ font-family:Segoe UI,sans-serif
+}
+html{scroll-behavior:smooth}
+body{
+ background:var(--bg);
+ color:var(--text);
+ transition:.3s;
+}
+
+/* NAV */
+nav{
+ position:sticky;top:0;z-index:1000;
+ background:var(--card);
+ display:flex;justify-content:space-between;
+ align-items:center;padding:15px 30px;
+ box-shadow:0 15px 30px rgba(0,0,0,.1)
+}
+nav a{
+ margin:0 10px;
+ text-decoration:none;
+ color:inherit;
+ font-weight:500;
+}
+nav a:hover{color:var(--primary)}
+nav button{
+ background:var(--primary);color:#fff;
+ border:none;padding:8px 18px;
+ border-radius:20px;cursor:pointer
+}
+
+/* HERO */
+header{
+ background:linear-gradient(135deg,var(--primary),var(--accent));
+ color:#fff;
+ padding:130px 20px;
+ text-align:center;
+}
+header h1{font-size:3.5rem}
+header p{margin-top:20px;font-size:1.2rem}
+header a{
+ display:inline-block;margin-top:30px;
+ background:#fff;color:#6366f1;
+ padding:15px 40px;border-radius:35px;
+ font-weight:bold;text-decoration:none
+}
+
+/* SECTION */
+section{padding:90px 20px}
+.container{max-width:1200px;margin:auto}
+
+/* CATEGORIES */
+.categories{
+ display:grid;
+ grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+ gap:30px;
+ margin-top:40px;
+}
+.category{
+ background:var(--card);
+ border-radius:25px;
+ overflow:hidden;
+ box-shadow:0 20px 40px rgba(0,0,0,.1);
+ transition:.3s;
+ text-align:center;
+}
+.category:hover{transform:translateY(-8px)}
+.category img{
+ width:100%;
+ height:250px;
+ object-fit:cover;
+}
+.category h3{
+ padding:20px;
+}
+
+/* FEATURES */
+.features{
+ display:grid;
+ grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+ gap:40px;
+ text-align:center;
+}
+.feature{
+ background:var(--card);
+ padding:40px;
+ border-radius:25px;
+ box-shadow:0 20px 40px rgba(0,0,0,.1);
+}
+.feature h3{
+ color:var(--primary);
+ margin-bottom:15px;
+}
+
+/* PRODUCTS PREVIEW */
+.products{
+ display:grid;
+ grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+ gap:30px;
+ margin-top:40px;
+}
+.product{
+ background:var(--card);
+ border-radius:25px;
+ overflow:hidden;
+ box-shadow:0 25px 50px rgba(0,0,0,.15);
+ transition:.3s;
+}
+.product:hover{transform:translateY(-8px)}
+.product img{
+ width:100%;height:230px;object-fit:cover
+}
+.product .info{padding:20px}
+.price{
+ color:var(--primary);
+ font-weight:bold;
+ margin-top:5px;
+}
+
+/* TESTIMONIALS */
+.testimonials{
+ display:grid;
+ grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+ gap:30px;
+}
+.testimonial{
+ background:var(--card);
+ padding:35px;
+ border-radius:25px;
+ box-shadow:0 20px 40px rgba(0,0,0,.1);
+}
+
+/* VIDEO */
+.video-wrapper{
+ max-width:900px;
+ margin:40px auto;
+ border-radius:25px;
+ overflow:hidden;
+ box-shadow:0 25px 50px rgba(0,0,0,.2);
+}
+.video-wrapper video{
+ width:100%;
+ display:block;
+}
+
+/* NEWSLETTER */
+.newsletter{
+ text-align:center;
+ background:linear-gradient(135deg,#020617,#1e293b);
+ color:#fff;
+ padding:80px 20px;
+ border-radius:35px;
+}
+.newsletter input{
+ padding:15px;
+ width:280px;
+ border-radius:25px;
+ border:none;
+ margin-right:10px;
+}
+.newsletter button{
+ padding:15px 30px;
+ border:none;
+ border-radius:25px;
+ background:var(--primary);
+ color:#fff;
+ cursor:pointer;
+}
+
+/* FOOTER */
+footer{
+ background:#020617;
+ color:#aaa;
+ text-align:center;
+ padding:45px 20px;
+ margin-top:80px;
+}
+</style>
+</head>
+
+<body>
+
+<nav>
+<strong>SOLESTEP</strong>
+<div>
+ <a href="index.html">Home</a>
+ <a href="products.html">Shop</a>
+ <a href="solemedia.html">SoleMedia</a>
+ <a href="longformcontent.html">LLContent</a>
+ <a href="products-journal.html">Journal</a>
+ <a href="email-marketing.html">Email</a>
+ <a href="video-marketing.html">Video</a>
+ <a href="aboutus.html">About</a>
+ <a href="login.html">Login</a>
+ <button onclick="toggleDark()">Dark</button>
+</div>
+</nav>
+
+<header>
+<h1>Designed for Comfort.<br>Built for Life.</h1>
+<p>Premium footwear crafted for everyday performance and modern style.</p>
+<a href="products.html">Explore Collection</a>
+</header>
+
+<section class="container">
+<h2 align="center">Shop by Category</h2>
+<div class="categories">
+<div class="category">
+<img src="images/product1.jfif">
+<h3>Running Shoes</h3>
+</div>
+<div class="category">
+<img src="images/product2.jfif">
+<h3>Sports Shoes</h3>
+</div>
+<div class="category">
+<img src="images/product3.jfif">
+<h3>Casual Sneakers</h3>
+</div>
+</div>
+</section>
+
+<section class="container">
+<h2 align="center">Why Choose SOLESTEP?</h2>
+<div class="features">
+<div class="feature">
+<h3>All-Day Comfort</h3>
+<p>Cushioned soles engineered for daily wear.</p>
+</div>
+<div class="feature">
+<h3>Modern Design</h3>
+<p>Minimal styles that match every outfit.</p>
+</div>
+<div class="feature">
+<h3>Durable Build</h3>
+<p>Built with breathable and long-lasting materials.</p>
+</div>
+</div>
+</section>
+
+
+
+<section class="container">
+<h2 align="center">Experience SoleStep</h2>
+<div class="video-wrapper">
+<video controls muted loop>
+<source src="video1.mp4" type="video/mp4">
+</video>
+</div>
+</section>
+
+<section class="container">
+<h2 align="center">What Customers Say</h2>
+<div class="testimonials">
+<div class="testimonial">
+<p>"Super comfortable and stylish. Perfect for daily use!"</p>
+<strong>— Yagna P.</strong>
+</div>
+<div class="testimonial">
+<p>"Best sneakers I’ve owned at this price range."</p>
+<strong>— Rahul S.</strong>
+</div>
+<div class="testimonial">
+<p>"Lightweight and durable. Highly recommended."</p>
+<strong>— Anjali M.</strong>
+</div>
+</div>
+</section>
+
+<section class="container">
+<div class="newsletter">
+<h2>Join the SoleStep Movement</h2>
+<p>Get exclusive offers and new collection updates.</p>
+<br>
+<input type="email" placeholder="Enter your email">
+<button>Subscribe</button>
+</div>
+</section>
+
+<footer>
+<h3 style="color:#fff">SOLESTEP</h3>
+<p>Premium Footwear for Style & Performance</p>
+<p style="margin-top:15px;font-size:.9rem">&copy; 2026 SOLESTEP</p>
+</footer>
+
+<script>
+function toggleDark(){
+ document.body.classList.toggle("dark");
+ localStorage.setItem("theme",
+ document.body.classList.contains("dark")?"dark":"light");
+}
+if(localStorage.getItem("theme")==="dark"){
+ document.body.classList.add("dark");
+}
+</script>
+<script src='https://cdn.jotfor.ms/agent/embedjs/019d18c8ada67610979f7c7eb9fb0248678b/embed.js'>
+</script>
+</body>
+</html>

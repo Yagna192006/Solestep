@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>SOLESTEP | Video Marketing</title>
+
+<style>
+:root{
+ --bg:#f5f7fb;
+ --text:#111;
+ --card:#ffffff;
+ --primary:#6366f1;
+ --accent:#9333ea;
+}
+.dark{
+ --bg:#0f172a;
+ --text:#f1f5f9;
+ --card:#1e293b;
+}
+*{
+ margin:0;
+ padding:0;
+ box-sizing:border-box;
+ font-family:Segoe UI,sans-serif;
+}
+html{scroll-behavior:smooth}
+body{
+ background:var(--bg);
+ color:var(--text);
+ transition:.3s;
+}
+
+/* NAV */
+nav{
+ position:sticky;top:0;z-index:1000;
+ background:var(--card);
+ display:flex;justify-content:space-between;
+ align-items:center;padding:15px 30px;
+ box-shadow:0 15px 30px rgba(0,0,0,.1)
+}
+nav a{
+ margin:0 10px;
+ text-decoration:none;
+ color:inherit;
+ font-weight:500;
+ transition:.3s;
+}
+nav a:hover{color:var(--primary)}
+nav button{
+ background:var(--primary);color:#fff;
+ border:none;padding:8px 18px;
+ border-radius:20px;cursor:pointer
+}
+
+/* HEADER */
+header{
+ background:linear-gradient(135deg,var(--primary),var(--accent));
+ color:#fff;
+ text-align:center;
+ padding:90px 20px;
+}
+header h1{font-size:2.8rem}
+header p{margin-top:10px;font-size:1.2rem}
+
+/* SECTION */
+section{
+ padding:70px 12%;
+}
+
+/* CARD */
+.card{
+ background:var(--card);
+ padding:30px;
+ border-radius:20px;
+ box-shadow:0 20px 40px rgba(0,0,0,.12);
+ margin-bottom:50px;
+ transition:.3s;
+}
+.card:hover{
+ transform:translateY(-8px);
+ box-shadow:0 25px 50px rgba(0,0,0,.18);
+}
+
+.card h3{
+ margin:20px 0 15px;
+ color:var(--primary);
+}
+
+.card p{
+ line-height:1.7;
+}
+
+.card video{
+ width:100%;
+ border-radius:15px;
+ box-shadow:0 15px 30px rgba(0,0,0,.2);
+}
+
+/* FOOTER */
+footer{
+ background:#020617;
+ color:#aaa;
+ text-align:center;
+ padding:40px 20px;
+ margin-top:60px;
+}
+</style>
+</head>
+
+<body>
+
+<nav>
+<strong>SOLESTEP</strong>
+<div>
+ <a href="index.html">Home</a>
+ <a href="products.html">Shop</a>
+ <a href="solemedia.html">SoleMedia</a>
+ <a href="longformcontent.html">LLContent</a>
+ <a href="products-journal.html">Journal</a>
+ <a href="email-marketing.html">Email</a>
+ <a href="video-marketing.html">Video</a>
+ <a href="aboutus.html">About</a>
+ <a href="login.html">Login</a>
+ <button onclick="toggleDark()">Dark</button>
+</div>
+</nav>
+
+<header>
+<h1>Video Marketing</h1>
+<p>Understanding Different Types of Marketing Videos</p>
+</header>
+
+<section>
+
+<!-- ANIMATION -->
+<div class="card">
+ <video controls>
+   <source src="Animation_video.mp4" type="video/mp4">
+ </video>
+ <h3>🎨 Animation Videos</h3>
+ <p>
+ Animation videos use creative visuals and motion graphics to explain complex ideas 
+ in a simple and engaging way. They are highly effective for storytelling and brand communication.
+ </p>
+</div>
+
+<!-- AR -->
+<div class="card">
+ <video controls>
+   <source src="AR.mp4" type="video/mp4">
+ </video>
+ <h3>📱 Augmented Reality (AR) Videos</h3>
+ <p>
+ AR videos combine digital elements with real-world environments. 
+ They allow customers to visualize products before purchase, enhancing engagement and decision-making.
+ </p>
+</div>
+
+<!-- DEMO -->
+<div class="card">
+ <video controls>
+   <source src="Demo_video.mp4" type="video/mp4">
+ </video>
+ <h3>📦 Demo Videos</h3>
+ <p>
+ Demo videos show how a product works. They explain features, benefits, 
+ and real-life usage, helping customers understand value clearly.
+ </p>
+</div>
+
+<!-- BRAND -->
+<div class="card">
+ <h3>🏷 Brand Videos</h3>
+ <p>
+ Brand videos focus on communicating a company’s mission, values, 
+ and identity to build emotional connections with customers.
+ </p>
+</div>
+
+<!-- EVENT -->
+<div class="card">
+ <h3>🎤 Event Videos</h3>
+ <p>
+ Event videos capture product launches, conferences, and special events 
+ to showcase brand presence and credibility.
+ </p>
+</div>
+
+<!-- EXPLANATION -->
+<div class="card">
+ <h3>📖 Explanation Videos</h3>
+ <p>
+ Explanation videos educate customers about problems and solutions. 
+ They simplify complex topics and guide customers toward understanding the product.
+ </p>
+</div>
+
+</section>
+
+<footer>
+© 2026 SOLESTEP | Video Marketing College Project
+</footer>
+
+<script>
+function toggleDark(){
+ document.body.classList.toggle("dark");
+ localStorage.setItem("theme",
+ document.body.classList.contains("dark")?"dark":"light");
+}
+if(localStorage.getItem("theme")==="dark"){
+ document.body.classList.add("dark");
+}
+</script>
+
+</body>
+</html>

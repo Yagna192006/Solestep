@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>SOLESTEP Journal | Crafted Shoes for Everyday Life</title>
+
+<style>
+:root{
+ --bg:#f5f7fb;
+ --text:#111;
+ --card:#ffffff;
+ --primary:#6366f1;
+ --accent:#9333ea;
+}
+.dark{
+ --bg:#0f172a;
+ --text:#f1f5f9;
+ --card:#1e293b;
+}
+*{
+ margin:0;
+ padding:0;
+ box-sizing:border-box;
+ font-family:Segoe UI,sans-serif;
+}
+html{scroll-behavior:smooth}
+body{
+ background:var(--bg);
+ color:var(--text);
+ line-height:1.8;
+ transition:.3s;
+}
+
+/* NAV */
+nav{
+ position:sticky;top:0;z-index:1000;
+ background:var(--card);
+ display:flex;justify-content:space-between;
+ align-items:center;padding:15px 30px;
+ box-shadow:0 15px 30px rgba(0,0,0,.1)
+}
+nav a{
+ margin:0 10px;
+ text-decoration:none;
+ color:inherit;
+ font-weight:500;
+ transition:.3s;
+}
+nav a:hover{color:var(--primary)}
+nav button{
+ background:var(--primary);
+ color:#fff;
+ border:none;
+ padding:8px 18px;
+ border-radius:20px;
+ cursor:pointer
+}
+
+/* HERO */
+.hero{
+ background:linear-gradient(135deg,var(--primary),var(--accent));
+ color:#fff;
+ padding:110px 20px;
+ text-align:center;
+}
+.hero h1{
+ font-size:3rem;
+}
+.hero p{
+ margin-top:15px;
+ font-size:1.2rem;
+}
+
+/* INTRO */
+.intro{
+ max-width:900px;
+ margin:60px auto;
+ text-align:center;
+ font-size:1.1rem;
+}
+
+/* JOURNAL ENTRY */
+.journal-entry{
+ max-width:1100px;
+ margin:80px auto;
+ display:flex;
+ gap:60px;
+ align-items:center;
+ padding:0 20px;
+}
+.journal-entry.reverse{
+ flex-direction:row-reverse;
+}
+.journal-entry .text{
+ flex:1;
+}
+.journal-entry .text h2{
+ color:var(--primary);
+ margin:15px 0;
+}
+.journal-entry .text p{
+ margin-bottom:15px;
+}
+.journal-entry .text ul{
+ margin-top:10px;
+}
+.journal-entry .text ul li{
+ margin-bottom:8px;
+}
+
+.tag{
+ display:inline-block;
+ background:var(--primary);
+ color:#fff;
+ padding:6px 14px;
+ border-radius:20px;
+ font-size:.85rem;
+}
+
+.journal-entry .image{
+ flex:1;
+}
+.journal-entry img{
+ width:100%;
+ border-radius:25px;
+ box-shadow:0 25px 50px rgba(0,0,0,.15);
+ transition:.4s;
+}
+.journal-entry img:hover{
+ transform:scale(1.03);
+}
+
+/* BRAND NOTE */
+.brand-note{
+ background:var(--card);
+ max-width:1000px;
+ margin:100px auto;
+ padding:60px;
+ border-radius:25px;
+ box-shadow:0 25px 50px rgba(0,0,0,.12);
+ text-align:center;
+}
+.brand-note h2{
+ color:var(--primary);
+ margin-bottom:20px;
+}
+.brand-note a{
+ color:var(--primary);
+ text-decoration:none;
+ font-weight:bold;
+}
+
+/* FOOTER */
+footer{
+ background:#020617;
+ color:#aaa;
+ text-align:center;
+ padding:45px 20px;
+ margin-top:80px;
+}
+
+/* RESPONSIVE */
+@media(max-width:900px){
+ .journal-entry{
+  flex-direction:column;
+  gap:30px;
+ }
+ .journal-entry.reverse{
+  flex-direction:column;
+ }
+}
+</style>
+</head>
+
+<body>
+
+<nav>
+<strong>SOLESTEP</strong>
+<div>
+ <a href="index.html">Home</a>
+ <a href="products.html">Shop</a>
+ <a href="solemedia.html">SoleMedia</a>
+ <a href="longformcontent.html">LLContent</a>
+ <a href="products-journal.html">Journal</a>
+ <a href="email-marketing.html">Email</a>
+ <a href="video-marketing.html">Video</a>
+ <a href="aboutus.html">About</a>
+ <a href="login.html">Login</a>
+ <button onclick="toggleDark()">Dark</button>
+</div>
+</nav>
+
+<header class="hero">
+<h1>SOLESTEP Journal</h1>
+<p>Stories behind the shoes you wear every day</p>
+</header>
+
+<section class="intro">
+<p>
+At <strong>SOLESTEP</strong>, shoes are more than products — they are companions.
+This journal gives you a closer look at how our footwear is designed, built,
+and perfected for everyday life.
+</p>
+</section>
+
+<section class="journal-entry">
+<div class="text">
+<span class="tag">Daily Wear</span>
+<h2>The Everyday Comfort Sneaker</h2>
+<p>
+Designed for long days and longer journeys, this sneaker is built with breathable mesh,
+flexible soles, and cushioned comfort.
+</p>
+<ul>
+<li>✔ Lightweight breathable fabric</li>
+<li>✔ Anti-slip rubber sole</li>
+<li>✔ All-day cushioning</li>
+</ul>
+</div>
+<div class="image">
+<img src="images/product1.jfif" alt="Everyday Comfort Sneaker">
+</div>
+</section>
+
+<section class="journal-entry reverse">
+<div class="text">
+<span class="tag">Performance</span>
+<h2>Urban Runner Series</h2>
+<p>
+Built for speed and endurance, inspired by people who never slow down.
+</p>
+<ul>
+<li>✔ Shock-absorbing midsole</li>
+<li>✔ High-grip outsole</li>
+<li>✔ Sweat-resistant lining</li>
+</ul>
+</div>
+<div class="image">
+<img src="images/product2.jfif" alt="Urban Runner Shoes">
+</div>
+</section>
+
+<section class="journal-entry">
+<div class="text">
+<span class="tag">Style</span>
+<h2>Street Classic Collection</h2>
+<p>
+Minimal. Bold. Timeless. Designed for effortless everyday fashion.
+</p>
+<ul>
+<li>✔ Premium synthetic leather</li>
+<li>✔ Timeless colorways</li>
+<li>✔ Easy lace-fit design</li>
+</ul>
+</div>
+<div class="image">
+<img src="images/product3.jfif" alt="Street Classic Shoes">
+</div>
+</section>
+
+<section class="brand-note">
+<h2>Why We Design This Way</h2>
+<p>
+At SOLESTEP, every product begins with a simple question:
+<strong>How will this shoe improve everyday life?</strong>
+</p>
+<p>
+We focus on comfort, durability, and clean design —
+creating footwear that fits seamlessly into your routine.
+</p>
+<p>
+View our full journal on
+<a href="https://solestep1.blogspot.com/2026/01/got-you-this-will-be-full-premium-long.html" target="_blank">
+SOLESTEP Official Blog →
+</a>
+</p>
+</section>
+
+<footer>
+<h3 style="color:#fff">SOLESTEP</h3>
+<p>Designed for Comfort. Built for Life.</p>
+<p style="margin-top:15px;font-size:.9rem">&copy; 2026 SOLESTEP</p>
+</footer>
+
+<script>
+function toggleDark(){
+ document.body.classList.toggle("dark");
+ localStorage.setItem("theme",
+ document.body.classList.contains("dark")?"dark":"light");
+}
+if(localStorage.getItem("theme")==="dark"){
+ document.body.classList.add("dark");
+}
+</script>
+
+</body>
+</html>
